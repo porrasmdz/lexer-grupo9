@@ -28,3 +28,5 @@ if __name__ == "__main__":
         if not tok:
             break  # No más entrada
         logger.warning(tok)
+
+        
