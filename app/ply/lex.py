@@ -899,3 +899,52 @@ def TOKEN(r):
             f.regex = r
         return f
     return set_regex
+
+reserved = {"def":"DEF", "IF":"if","else":"ELSE", "fn": "FN", "quote":"QUOTE", "TRY":"try", "catch":"CATCH","var":"VAR","loop":"LOOP","defn":"DEFN","LET":"let","do":"DO","recur":"RECUR","throw":"THROW","finally":"FINALLY"}
+
+
+# List of token names.   This is always required
+tokens = (
+   'INT',
+    'FLOAT',
+   'PLUS',
+   'MINUS',
+   'TIMES',
+   'DIVIDE',
+   'LPAREN',
+   'RPAREN',
+    'ID',
+    'MAYORQUE',
+    'DOSPUNTOS',
+    'MENORQUE',
+    'MAYOROIGUALQUE',
+    'MENOROIGUALQUE',
+    'EQUALS',
+    'NOTEQUALS',
+    'VARIABLE',
+    'STRING',
+    'BOOLEAN',
+    'LISTA',
+    'CONJUNTO',
+    'AND',
+    'OR',
+    'NOT'
+) + tuple(reserved.values())
+
+# Regular expression rules for simple tokens
+t_PLUS    = r'\+'
+t_MINUS   = r'-'
+t_TIMES   = r'\*'
+t_DIVIDE  = r'/'
+t_LPAREN  = r'\('
+t_RPAREN  = r'\)'
+t_MAYORQUE = r'>'
+t_MENORQUE = r'<'
+t_MAYORIGUALQUE = r'>='
+t_MENORIGUALQUE = r'<='
+t_DOSPUNTOS = r':'
+t_EQUALS=r'='
+t_NOTEQUALS=r'!='
+
+
+
