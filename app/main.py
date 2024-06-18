@@ -3,7 +3,7 @@ from logger_instance import get_group_logger
 from datetime import datetime
 from lexer import lexer
 #Reemplazar por mi_nombre por tu nombre
-logger = get_group_logger("lexico", "mi_nombre", datetime.now())
+logger = get_group_logger("lexico", "Andres Porras", datetime.now())
 
 if __name__ == "__main__":
     #Antes y despues de ejecutar una funcion usar esta funcion para ejecutar los logs
@@ -29,4 +29,4 @@ if __name__ == "__main__":
             break  # No más entrada
         logger.warning(tok)
 
-        
+
