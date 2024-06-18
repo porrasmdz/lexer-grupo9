@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     #Andres Porrs Algoritmo 1
     data = '''
-<<<<<<< HEAD
+    
     (defn longitud-cadena [s]
         ;; Verifica que el argumento sea una cadena
         (if (string? s)
