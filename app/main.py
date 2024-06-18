@@ -11,7 +11,13 @@ if __name__ == "__main__":
 
     #Andres Porrs Algoritmo 1
     data = '''
-    
+    ; Numero es par o impar
+(defn determinar-paridad [numero]
+  (if (integer? numero)
+    (if (zero? (mod numero 2))
+      "es par"
+      "es impar")
+    (str numero " no es un número entero")))
     '''
     
     logger.warning("Algoritmo 1")
