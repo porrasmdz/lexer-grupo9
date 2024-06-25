@@ -9,7 +9,8 @@ def p_codigo(p):
               | condiciones
               | estructuraDatos
               | funcion
-              | estructuraControl'''
+              | estructuraControl
+              | asignacion'''
 
 #Expresiones
 def p_expresionAritmetica(p):
@@ -35,7 +36,16 @@ def p_argumentos(p):
     '''argumentos : ID
                   | ID argumentos'''
 #Asignaciones
-
+def p_asignacion(p):
+    '''
+    asignacion : LPAREN DEF ID valor RPAREN
+               | LPAREN LET LPAREN asignaciones RPAREN RPAREN
+    '''
+def p_asignaciones(p):
+    '''
+    asignaciones : ID valor
+                      | ID valor asignaciones
+    '''
 #Estructuras de control
 def p_estructuraControl(p):
     '''estructuraControl : estructuraIf
@@ -72,7 +82,7 @@ def p_operComp(p):
 
 #Estructuras de datos    
 def p_estructuraDatos(p):
-    '''estructuraDatos : LPAREN conjunto RPAREN
+    '''estructuraDatos : conjunto 
                     |   listas''' 
 def p_listas(p):
     '''listas : LISTSTART valores RPAREN'''
