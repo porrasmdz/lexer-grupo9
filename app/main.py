@@ -2,13 +2,12 @@
 from logger_instance import get_group_logger
 from datetime import datetime
 from lexer import lexer
-#Reemplazar por mi_nombre por tu nombre
-logger = get_group_logger("lexico", "Andres Porras", datetime.now())
+from config import settings
+
+#No olvidar actualizar variables de entorno
+logger = get_group_logger(settings.NOMBRE_AVANCE, settings.NOMBRE_ESTUDIANTE, datetime.now())
 
 if __name__ == "__main__":
-    #Antes y despues de ejecutar una funcion usar esta funcion para ejecutar los logs
-    
-
     #Andres Porrs Algoritmo 1
     data = '''
     
@@ -34,7 +33,7 @@ if __name__ == "__main__":
     (str numero " no es un número entero")))
 >>>>>>> 154a9a9039fc31faee0e62643b55cd359bc24027
     '''
-    
+    #Antes y despues de ejecutar una funcion usar esta funcion para ejecutar los logs
     logger.warning("Algoritmo 1")
     logger.warning(f"INPUT : {data}")
     lexer.input(data)
