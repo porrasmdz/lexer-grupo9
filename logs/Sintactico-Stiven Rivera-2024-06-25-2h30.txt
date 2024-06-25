@@ -1,0 +1,3 @@
+2024-06-25 02:30:43,144 | INPUT : (list 'e )
+2024-06-25 02:30:43,147 | Syntax error at line 1, position 1: Unexpected token 'list'
+2024-06-25 02:30:43,148 | None

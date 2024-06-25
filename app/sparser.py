@@ -96,15 +96,20 @@ def p_operComp(p):
 def p_estructuraDatos(p):
     '''estructuraDatos : conjunto 
                     |   listas''' 
-def p_listas(p):
-    '''listas : LISTSTART valores RPAREN'''
+
 
 def p_conjunto(p):
     '''conjunto : HASHSET valores RBRACE
                 | SET LBRACK valores RBRACK'''
 
 ##PENDING lista
+def p_listas(p):
+    '''listas : LPAREN LIST contenidolistas RPAREN'''
 
+def p_contenidolistas(p):
+    '''contenidolistas : COMILLA valor
+            | COMILLA valor contenidolistas
+            | valores'''
 #Valores
 def p_valor(p):
     '''valor : INT

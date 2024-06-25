@@ -1,0 +1,6 @@
+2024-06-25 02:29:33,015 | INPUT : (list 'w 'w 'r 'r 'e)
+2024-06-25 02:29:33,016 | Syntax error at line 1, position 1: Unexpected token 'list'
+2024-06-25 02:29:33,017 | None
+2024-06-25 02:29:40,492 | INPUT : (list 'w )
+2024-06-25 02:29:40,494 | Syntax error at line 1, position 1: Unexpected token 'list'
+2024-06-25 02:29:40,497 | None

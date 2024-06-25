@@ -54,6 +54,7 @@ tokens = (
     'LESS_THAN',
     'GREATER_EQUAL',
     'LESS_EQUAL',
+    'COMILLA',
 )  + tuple(reserved.values())
 
 # Regular expression rules for simple tokens
@@ -76,7 +77,7 @@ t_GREATER_THAN = r'>'
 t_LESS_THAN = r'<'
 t_GREATER_EQUAL = r'>='
 t_LESS_EQUAL = r'<='
-
+t_COMILLA = r'\''
 
 # Regla para identificadores y palabras reservadas
 def t_ID(t):
