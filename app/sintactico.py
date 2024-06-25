@@ -1,5 +1,10 @@
-import ply.yacc as yacc
+from ply import yacc as yacc
 from lexer import tokens
+
+def p_codigo(p):
+    '''codigo : expresionAritmetica
+              | impresion
+              | condiciones'''
 
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operadores valores RPAREN'''
@@ -16,14 +21,16 @@ def p_impresion(p):
         | LPAREN PRINT RPAREN
         | LPAREN PRINTLN RPAREN'''
     
-def p_valores(p):
-    'valores : valor valor'
 
 def p_valor(p):
     '''valor : INT
         | FLOAT
         | STRING
         | ID'''
+    
+def p_valores(p):
+    'valores : valor valor'
+
 
 def p_condiciones(p):
     '''condiciones : condicion

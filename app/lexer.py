@@ -1,4 +1,8 @@
 from ply.lex import lex
+from logger_instance import get_group_logger
+from config import settings
+from datetime import datetime
+logger = get_group_logger("lexico", settings.NOMBRE_ESTUDIANTE, datetime.now())
 
 reserved = {
     "def": "DEF",
@@ -116,3 +120,37 @@ def t_error(t):
 
 
 lexer = lex()
+
+def test_lexer():
+    #Alg 1
+    data = '''
+    (defn longitud-cadena [s]
+        ;; Verifica que el argumento sea una cadena
+        (if (string? s)
+            ;; Calcula la longitud iterando sobre cada carácter
+            (loop [contador 0
+                cadena s]
+                (if (empty? cadena)
+                contador
+            (recur (inc contador) (subs cadena 1))))
+            ;; Genera una excepción si el argumento no es una cadena
+        (throw (IllegalArgumentException. "El argumento debe ser una cadena"))))
+    '''
+        #Alg 2
+    #data =  '''
+    #     ; Numero es par o impar
+    # (defn determinar-paridad [numero]
+    #   (if (integer? numero)
+    #     (if (zero? (mod numero 2))
+    #       "es par"
+    #       "es impar")
+    #     (str numero " no es un número entero")))
+    #     '''
+    logger.warning("Algoritmo 1")
+    logger.warning(f"INPUT : {data}")
+    lexer.input(data)
+    while True:
+        tok = lexer.token()
+        if not tok:
+            break  # No más entrada
+        logger.warning(tok)
