@@ -44,7 +44,9 @@ def p_condiciones(p):
 def p_condicion(p):
     '''condicion : LPAREN operComp valor valor RPAREN'''
     
-
+def p_conector(p):
+    '''conector : AND
+                | OR'''
     
 def p_operComp(p):
     '''operComp : EQUAL

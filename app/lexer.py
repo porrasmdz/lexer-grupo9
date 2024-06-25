@@ -25,7 +25,8 @@ reserved = {
     "not": "NOT",
     "mod": "MOD",
     "print":"PRINT",
-    "println":"PRINTLN"
+    "println":"PRINTLN",
+    "while" : "WHILE"
 }
 tokens = (
     'INT',
