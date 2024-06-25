@@ -22,7 +22,8 @@ reserved = {
     "print":"PRINT",
     "println":"PRINTLN",
     "while" : "WHILE",
-    "set": "SET"
+    "set": "SET",
+    "list": "LIST"
 }
 tokens = (
     'INT',
@@ -42,6 +43,7 @@ tokens = (
     'RBRACE',
     'HASH',
     'HASHSET',
+    'LISTSTART',
     'COMMENT_SINGLE',
     'COMMENT_MULTI',
     'EQUAL',
@@ -65,6 +67,7 @@ t_LBRACE = r'\{'
 t_RBRACE = r'\}'
 t_HASH = r'\#'
 t_HASHSET=r'\#\{'
+t_LISTSTART=r'\'\('
 t_EQUAL = r'='
 t_NOT_EQUAL = r'not='
 t_GREATER_THAN = r'>'

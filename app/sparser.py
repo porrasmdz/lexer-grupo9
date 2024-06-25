@@ -72,7 +72,10 @@ def p_operComp(p):
 
 #Estructuras de datos    
 def p_estructuraDatos(p):
-    '''estructuraDatos : LPAREN conjunto RPAREN''' 
+    '''estructuraDatos : LPAREN conjunto RPAREN
+                    |   listas''' 
+def p_listas(p):
+    '''listas : LISTSTART valores RPAREN'''
 
 def p_conjunto(p):
     '''conjunto : HASHSET valores RBRACE
