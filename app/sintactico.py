@@ -4,22 +4,12 @@ from lexer import tokens
 def p_codigo(p):
     '''codigo : expresionAritmetica
               | impresion
-              | condiciones'''
+              | condiciones
+              | listas'''
 
-      
-def p_codigo(p):
-    '''codigo : expresionAritmetica
-            | impresion 
-            | condiciones
-            | ControlWhile'''   
-            
-def p_codigoo(p):
-     '''codigoo : expresionAritmetica
-            | impresion 
-            | condiciones'''  
             
 def p_ControlWhile(p):
-    'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigoo RPAREN RPAREN'
+    'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigo RPAREN RPAREN'
             
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operadores valores RPAREN'''
@@ -66,13 +56,17 @@ def p_operComp(p):
             | GREATER_EQUAL
             | LESS_EQUAL'''
     
+def p_listas(p):
+    '''listas : LPAREN elementos RPAREN'''
 
-
+def p_elementos(p):
+    '''elementos : valor
+            | valor elementos'''
+            
+           
 # Error rule for syntax errors
 def p_error(p):
     print("Syntax error in input!")
 
 # Build the parser
 parser = yacc.yacc()
-
-

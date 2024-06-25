@@ -2,6 +2,7 @@ from ply.lex import lex
 from logger_instance import get_group_logger
 from config import settings
 from datetime import datetime
+
 logger = get_group_logger("lexico", settings.NOMBRE_ESTUDIANTE, datetime.now())
 
 reserved = {
