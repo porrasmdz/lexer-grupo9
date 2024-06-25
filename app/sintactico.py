@@ -1,6 +1,10 @@
 import ply.yacc as yacc
 from lexer import tokens
-
+      
+            
+def p_ControlWhile(p):
+    'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigo RPAREN RPAREN'
+            
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operadores valores RPAREN'''
     

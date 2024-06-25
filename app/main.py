@@ -47,7 +47,6 @@ if __name__ == "__main__":
             break  # No más entrada
         logger.warning(tok)
 
-
 while True:
    try:
        s = input('clojure > ')
