@@ -19,7 +19,9 @@ reserved = {
     "and": "AND",
     "or": "OR",
     "not": "NOT",
-    "mod": "MOD"
+    "mod": "MOD",
+    "print":"PRINT",
+    "println":"PRINTLN"
 }
 tokens = (
     'INT',
