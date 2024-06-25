@@ -1,9 +1,19 @@
 import ply.yacc as yacc
 from lexer import tokens
       
+def p_codigo(p):
+    '''codigo : expresionAritmetica
+            | impresion 
+            | condiciones
+            | ControlWhile'''   
+            
+def p_codigoo(p):
+     '''codigoo : expresionAritmetica
+            | impresion 
+            | condiciones'''  
             
 def p_ControlWhile(p):
-    'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigo RPAREN RPAREN'
+    'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigoo RPAREN RPAREN'
             
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operadores valores RPAREN'''
