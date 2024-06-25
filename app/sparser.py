@@ -30,7 +30,8 @@ def p_impresion(p):
 
 #Funciones
 def p_funcion(p):
-    '''funcion : LPAREN DEFN ID LBRACK argumentos RBRACK codigo RPAREN'''
+    '''funcion : LPAREN DEFN ID LBRACK argumentos RBRACK codigo RPAREN
+            | LPAREN DEFN ID LBRACK RBRACK codigo RPAREN'''
 
 def p_argumentos(p):
     '''argumentos : ID
@@ -51,7 +52,8 @@ def p_asignaciones(p):
 #Estructuras de control
 def p_estructuraControl(p):
     '''estructuraControl : estructuraIf
-                        | ControlWhile'''
+                        | ControlWhile
+                        | estructuraFor'''
 
 def p_estructuraIf(p):
     '''estructuraIf : LPAREN IF condicion codigo RPAREN
@@ -60,7 +62,15 @@ def p_estructuraIf(p):
 def p_ControlWhile(p):
     'ControlWhile :  LPAREN WHILE LPAREN condiciones RPAREN LPAREN codigo RPAREN RPAREN'
 
+def p_estructuraFor(p):
+    '''estructuraFor : LPAREN FOR argumentoFor codigo RPAREN'''
 
+def p_argumentoFor(p):
+    '''argumentoFor : secuencia 
+                | secuencia argumentoFor'''
+
+def p_secuencia(p):
+    '''secuencia : LBRACK ID LPAREN RANGE INT INT RPAREN RBRACK'''
 
 def p_condiciones(p):
     '''condiciones : condicion

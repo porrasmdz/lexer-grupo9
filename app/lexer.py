@@ -23,7 +23,9 @@ reserved = {
     "println":"PRINTLN",
     "while" : "WHILE",
     "set": "SET",
-    "list": "LIST"
+    "list": "LIST",
+    "range": "RANGE",
+    "for": "FOR"
 }
 tokens = (
     'INT',

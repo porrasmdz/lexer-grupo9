@@ -1,0 +1,7 @@
+2024-06-25 02:09:51,991 | INPUT : ( for [ x (range 1 8)] print(x))
+2024-06-25 02:09:51,992 | Syntax error at line 1, position 23: Unexpected token 'print'
+2024-06-25 02:09:51,994 | None
+2024-06-25 02:10:19,508 | INPUT : ( for [ x (range 1 8)] (print x))
+2024-06-25 02:10:19,510 | None
+2024-06-25 02:10:51,731 | INPUT : ( for [ x (range 1 8)][ y (range 8 5)] (print x))
+2024-06-25 02:10:51,732 | None
