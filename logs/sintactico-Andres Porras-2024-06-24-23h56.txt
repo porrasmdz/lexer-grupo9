@@ -1,0 +1,5 @@
+2024-06-24 23:56:53,775 | INPUT : (def x 10)
+2024-06-24 23:56:53,776 | None
+2024-06-24 23:56:57,697 | INPUT : (def y 3.14)
+2024-06-24 23:56:57,697 | Syntax error at line 1, position 9: Unexpected token '14'
+2024-06-24 23:56:57,698 | None

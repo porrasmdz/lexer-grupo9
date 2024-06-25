@@ -1,0 +1,11 @@
+2024-06-24 23:59:37,658 | INPUT : 
+2024-06-24 23:59:40,297 | INPUT : (def suma (+ 5 7))
+2024-06-24 23:59:40,297 | Syntax error at line 1, position 10: Unexpected token '('
+2024-06-24 23:59:40,298 | None
+2024-06-24 23:59:56,958 | INPUT : (def es-mayor (if (> 15 10) true false))
+2024-06-24 23:59:56,958 | Syntax error at line 1, position 14: Unexpected token '('
+2024-06-24 23:59:56,958 | Syntax error at line 1, position 28: Unexpected token 'true'
+2024-06-24 23:59:56,959 | None
+2024-06-25 00:00:02,585 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5})
+2024-06-25 00:00:02,586 | Syntax error at line 1, position 25: Unexpected token '#{'
+2024-06-25 00:00:02,587 | None

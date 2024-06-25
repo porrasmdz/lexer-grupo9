@@ -57,8 +57,8 @@ tokens = (
 # Regular expression rules for simple tokens
 t_PLUS = r'\+'
 t_MINUS = r'-'
-t_TIMES = r'\*'
-t_DIVIDE = r'/'
+t_TIMES = r'\*\s'
+t_DIVIDE = r'\/'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_LBRACK = r'\['
@@ -79,6 +79,8 @@ t_LESS_EQUAL = r'<='
 # Regla para identificadores y palabras reservadas
 def t_ID(t):
     r'[\*!\?\-_a-zA-Z][\*!\?\-_a-zA-Z0-9]*'
+    # r'[\*[^\s]!\?\-_a-zA-Z][\*[^\s]!\?\-_a-zA-Z0-9]*|\*[^\s]+[\*[^\s]!\?\-_a-zA-Z0-9]*'
+
     t.type = reserved.get(t.value, 'ID')
     return t
 
@@ -91,7 +93,7 @@ def t_INT(t):
 t_STRING = r'\"([^\\\n]|(\\.))*?\"'
 
 def t_FLOAT(t):
-    r'\d+\.\d+'
+    r'\d+\.\d+([eE][-+]?\d+)?'
     t.value = float(t.value)
     return t
 

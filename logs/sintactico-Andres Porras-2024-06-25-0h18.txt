@@ -1,0 +1,10 @@
+2024-06-25 00:18:21,933 | INPUT : (* 2 3)
+2024-06-25 00:18:21,938 | None
+2024-06-25 00:18:32,840 | INPUT : (def *lista-de-nombres '("Juan" "María" "Pedro")) 
+2024-06-25 00:18:32,884 | Syntax error at line 1, position 11: Unexpected token '-'
+2024-06-25 00:18:32,923 | Syntax error at line 1, position 48: Unexpected token ')'
+2024-06-25 00:18:32,925 | None
+2024-06-25 00:18:59,014 | INPUT : (def *lista-de-nombres '("Juan" "María" "Pedro")) 
+2024-06-25 00:19:00,342 | Syntax error at line 1, position 11: Unexpected token '-'
+2024-06-25 00:19:01,391 | Syntax error at line 1, position 48: Unexpected token ')'
+2024-06-25 00:19:01,422 | None

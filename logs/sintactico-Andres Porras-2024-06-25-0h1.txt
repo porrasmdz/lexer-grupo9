@@ -1,0 +1,14 @@
+2024-06-25 00:01:28,836 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5})
+2024-06-25 00:01:28,837 | Syntax error at line 1, position 37: Unexpected token ')'
+2024-06-25 00:01:28,837 | None
+2024-06-25 00:01:39,823 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5})
+2024-06-25 00:01:39,824 | None
+2024-06-25 00:01:54,865 | INPUT : (def es-mayor (if (> 15 10) true false))
+2024-06-25 00:01:54,866 | Syntax error at line 1, position 14: Unexpected token '('
+2024-06-25 00:01:54,867 | Syntax error at line 1, position 28: Unexpected token 'true'
+2024-06-25 00:01:54,868 | None
+2024-06-25 00:02:06,376 | INPUT : (def lista-de-nombres '("Juan" "María" "Pedro")) 
+2024-06-25 00:02:06,376 | None
+2024-06-25 00:02:26,403 | INPUT : (println "El resultado es" (+ 2 3))
+2024-06-25 00:02:26,403 | Syntax error at line 1, position 27: Unexpected token '('
+2024-06-25 00:02:26,404 | None

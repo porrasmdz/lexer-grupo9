@@ -1,0 +1,15 @@
+2024-06-25 00:21:07,933 | INPUT : (println "Hola, mundo!")
+2024-06-25 00:21:07,934 | None
+2024-06-25 00:21:10,618 | INPUT : (println "El resultado es" (+ 2 3)) 
+2024-06-25 00:21:10,619 | None
+2024-06-25 00:21:57,599 | INPUT : (println "El resultado es" (+ 2 3)) 
+2024-06-25 00:21:57,628 | None
+2024-06-25 00:42:08,537 | INPUT : (println)
+2024-06-25 00:42:08,538 | None
+2024-06-25 00:42:13,516 | INPUT : (println "Hola, mundo!")
+2024-06-25 00:42:13,516 | None
+2024-06-25 00:42:19,051 | INPUT : (println "El resultado es" (+ 2 3))
+2024-06-25 00:42:19,052 | None
+2024-06-25 00:42:28,942 | INPUT : (+ (* 2 3) (- 7 4))
+2024-06-25 00:42:28,943 | Syntax error at line 1, position 4: Unexpected token '*'
+2024-06-25 00:42:28,944 | None

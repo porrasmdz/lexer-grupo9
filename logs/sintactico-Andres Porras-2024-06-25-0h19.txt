@@ -1,0 +1,13 @@
+2024-06-25 00:19:31,268 | INPUT : (+ (* 2 3) (- 7 4))
+2024-06-25 00:19:31,277 | Syntax error at line 1, position 3: Unexpected token '('
+2024-06-25 00:19:31,316 | Syntax error at line 1, position 18: Unexpected token ')'
+2024-06-25 00:19:31,318 | None
+2024-06-25 00:19:49,994 | INPUT : (+ (* 2 3) (- 7 4))
+2024-06-25 00:19:49,998 | None
+2024-06-25 00:20:01,359 | INPUT : (println "El resultado es" (+ 2 3)) 
+2024-06-25 00:20:01,369 | Syntax error at line 1, position 9: Unexpected token '"El resultado es"'
+2024-06-25 00:20:01,372 | Syntax error at line 1, position 34: Unexpected token ')'
+2024-06-25 00:20:01,374 | None
+2024-06-25 00:20:13,821 | INPUT : (println "Hola, mundo!")
+2024-06-25 00:20:13,892 | Syntax error at line 1, position 9: Unexpected token '"Hola, mundo!"'
+2024-06-25 00:20:13,893 | None

@@ -11,7 +11,7 @@ $python ./app/main.py
 ##Impresión con cero, uno o más argumentos
 (println)
 (println "Hola, mundo!")
-(println "El resultado es" (+ 2 3)) !!TODO
+(println "El resultado es" (+ 2 3)) 
 
 ##Expresiones aritméticas con uno o más operadores
 (+ 2 3)
@@ -26,10 +26,10 @@ $python ./app/main.py
 (def x 10) 
 (def y 3.14)
 (def z true)
-(def suma (+ 5 7))
-(def es-mayor (if (> 15 10) true false))
-(def lista-de-nombres '("Juan" "María" "Pedro"))
-(def conjunto-de-numeros #{1 2 3 4 5}) !!TODO
+(def suma (+ 5 7)) !!TODO
+(def es-mayor (if (> 15 10) true false)) !!TODO
+(def lista-de-nombres '("Juan" "María" "Pedro")) 
+(def conjunto-de-numeros #{1 2 3 4 5}) 
 
 ##Declarar estructuras de datos
 ('("Juan" "María" "Pedro"))

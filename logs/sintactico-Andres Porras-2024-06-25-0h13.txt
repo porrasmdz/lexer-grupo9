@@ -1,0 +1,13 @@
+2024-06-25 00:13:17,227 | INPUT : (*2 3)
+2024-06-25 00:13:17,227 | Syntax error at line 1, position 1: Unexpected token '*2'
+2024-06-25 00:13:17,228 | None
+2024-06-25 00:13:19,202 | INPUT : (* 2 3)
+2024-06-25 00:13:19,209 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-06-25 00:13:19,266 | None
+2024-06-25 00:13:23,858 | INPUT : (+ 2 3)
+2024-06-25 00:13:23,865 | None
+2024-06-25 00:13:55,230 | INPUT : (+ 2 3)
+2024-06-25 00:13:55,231 | None
+2024-06-25 00:13:56,532 | INPUT : (* 2 3)
+2024-06-25 00:13:56,533 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-06-25 00:13:56,534 | None

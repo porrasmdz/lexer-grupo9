@@ -14,10 +14,10 @@ def p_codigo(p):
 
 #Expresiones
 def p_expresionAritmetica(p):
-    '''expresionAritmetica : LPAREN operadores valores RPAREN'''
+    '''expresionAritmetica : LPAREN operador valor valor RPAREN'''
     
-def p_operadores(p):
-    '''operadores :  PLUS
+def p_operador(p):
+    '''operador : PLUS
                 | MINUS
                 | TIMES
                 | DIVIDE'''
@@ -39,7 +39,9 @@ def p_argumentos(p):
 def p_asignacion(p):
     '''
     asignacion : LPAREN DEF ID valor RPAREN
+               | LPAREN DEF ID estructuraDatos RPAREN
                | LPAREN LET LPAREN asignaciones RPAREN RPAREN
+                
     '''
 def p_asignaciones(p):
     '''
@@ -98,7 +100,8 @@ def p_valor(p):
     '''valor : INT
         | FLOAT
         | STRING
-        | ID'''
+        | ID
+        | expresionAritmetica'''
     
 def p_valores(p):
     '''valores : valor 
@@ -118,6 +121,4 @@ parser = yacc.yacc()
 
 
 #TODO  asignacion variable, asignacion estructura, asignacion aritmetica, asignacion booleana (condicional)
-#TODO  declaracion de una estructura de datos (lista y conjunto) + los otros de clojure
-#TODO  declaracion aritmetica con uno o mas operadores
 #TODO  impresión con cero, uno o más argumentos
