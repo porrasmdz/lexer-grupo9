@@ -2,10 +2,18 @@
 from logger_instance import get_group_logger
 from datetime import datetime
 from lexer import lexer
+<<<<<<< HEAD
 from config import settings
 
 #No olvidar actualizar variables de entorno
 logger = get_group_logger(settings.NOMBRE_AVANCE, settings.NOMBRE_ESTUDIANTE, datetime.now())
+=======
+from sintactico import parser
+
+
+#Reemplazar por mi_nombre por tu nombre
+logger = get_group_logger("lexico", "Andres Porras", datetime.now())
+>>>>>>> b47c95d9f0c2be2272006333a9d1999f4d401da1
 
 if __name__ == "__main__":
     #Andres Porrs Algoritmo 1
@@ -44,3 +52,11 @@ if __name__ == "__main__":
         logger.warning(tok)
 
 
+while True:
+   try:
+       s = input('clojure > ')
+   except EOFError:
+       break
+   if not s: continue
+   result = parser.parse(s)
+   print(result)

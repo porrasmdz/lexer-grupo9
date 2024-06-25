@@ -62,7 +62,6 @@ t_RBRACK = r'\]'
 t_LBRACE = r'\{'
 t_RBRACE = r'\}'
 t_HASH = r'\#'
-
 t_EQUAL = r'='
 t_NOT_EQUAL = r'not='
 t_GREATER_THAN = r'>'
