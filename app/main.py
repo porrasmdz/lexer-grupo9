@@ -2,6 +2,9 @@
 from logger_instance import get_group_logger
 from datetime import datetime
 from lexer import lexer
+from sintactico import parser
+
+
 #Reemplazar por mi_nombre por tu nombre
 logger = get_group_logger("lexico", "Andres Porras", datetime.now())
 
@@ -45,3 +48,11 @@ if __name__ == "__main__":
         logger.warning(tok)
 
 
+while True:
+   try:
+       s = input('clojure > ')
+   except EOFError:
+       break
+   if not s: continue
+   result = parser.parse(s)
+   print(result)
