@@ -1,5 +1,6 @@
 import logging
 from datetime import datetime
+from config import settings
 
 def get_group_logger(analysis:str, name: str, timestamp:datetime):
 
@@ -19,3 +20,6 @@ def get_group_logger(analysis:str, name: str, timestamp:datetime):
     logger.addHandler(c_handler)
     logger.addHandler(f_handler)
     return logger
+
+
+logger = get_group_logger(settings.NOMBRE_AVANCE, settings.NOMBRE_ESTUDIANTE, datetime.now())

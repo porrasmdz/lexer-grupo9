@@ -1,0 +1,36 @@
+2024-06-24 23:44:19,148 | INPUT : (println)
+2024-06-24 23:44:19,149 | None
+2024-06-24 23:44:23,420 | INPUT : (println "Hola, mundo!")
+2024-06-24 23:44:23,421 | None
+2024-06-24 23:44:29,039 | INPUT : (println "El resultado es" (+ 2 3))
+2024-06-24 23:44:29,039 | Syntax error at line 1, position 27: Unexpected token '('
+2024-06-24 23:44:29,040 | None
+2024-06-24 23:44:36,307 | INPUT : (+ 2 3)
+2024-06-24 23:44:36,307 | None
+2024-06-24 23:44:40,661 | INPUT : (+ (* 2 3) (- 7 4))
+2024-06-24 23:44:40,662 | Syntax error at line 1, position 3: Unexpected token '('
+2024-06-24 23:44:40,662 | None
+2024-06-24 23:44:46,184 | INPUT : (if (< 5 10)  (println "5 es menor que 10") (println "5 no es menor que 10"))
+2024-06-24 23:44:46,185 | None
+2024-06-24 23:44:51,168 | INPUT : (if (< 5 10)  "5 es menor que 10" "5 no es menor que 10")
+2024-06-24 23:44:51,168 | Syntax error at line 1, position 14: Unexpected token '"5 es menor que 10"'
+2024-06-24 23:44:51,168 | None
+2024-06-24 23:44:55,429 | INPUT : v
+2024-06-24 23:44:55,429 | Syntax error at line 1, position 0: Unexpected token 'v'
+2024-06-24 23:44:55,430 | None
+2024-06-24 23:44:56,277 | INPUT : (if (and (< 5 10) (not= 5 7))
+2024-06-24 23:44:56,278 | Syntax error at line 1, position 5: Unexpected token 'and'
+2024-06-24 23:44:56,278 | Syntax error at line 1, position 18: Unexpected token '('
+2024-06-24 23:44:56,279 | None
+2024-06-24 23:45:08,278 | INPUT : (if (and (< 5 10) (not= 5 7)) "Ambas condiciones son verdaderas" "Al menos una condición no se cumple")
+2024-06-24 23:45:08,279 | Syntax error at line 1, position 5: Unexpected token 'and'
+2024-06-24 23:45:08,279 | Syntax error at line 1, position 18: Unexpected token '('
+2024-06-24 23:45:08,280 | None
+2024-06-24 23:45:15,061 | INPUT : (def x 10)
+2024-06-24 23:45:15,062 | Syntax error at line 1, position 1: Unexpected token 'def'
+2024-06-24 23:45:15,062 | None
+2024-06-24 23:45:21,513 | INPUT : ('("Juan" "María" "Pedro"))
+2024-06-24 23:45:21,514 | Syntax error at line 1, position 2: Unexpected token '('
+2024-06-24 23:45:21,514 | None
+2024-06-24 23:45:27,147 | INPUT : (#{1 2 3 4 5})
+2024-06-24 23:45:27,148 | None

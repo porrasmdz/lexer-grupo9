@@ -1,8 +1,4 @@
 from ply.lex import lex
-from logger_instance import get_group_logger
-from config import settings
-from datetime import datetime
-logger = get_group_logger("lexico", settings.NOMBRE_ESTUDIANTE, datetime.now())
 
 reserved = {
     "def": "DEF",
@@ -11,7 +7,6 @@ reserved = {
     "quote": "QUOTE",
     "try": "TRY",
     "defn": "DEFN",
-    "else": "ELSE",
     "loop": "LOOP",
     "var": "VAR",
     "catch": "CATCH",
@@ -26,7 +21,8 @@ reserved = {
     "mod": "MOD",
     "print":"PRINT",
     "println":"PRINTLN",
-    "while" : "WHILE"
+    "while" : "WHILE",
+    "set": "SET"
 }
 tokens = (
     'INT',
@@ -45,6 +41,7 @@ tokens = (
     'LBRACE',
     'RBRACE',
     'HASH',
+    'HASHSET',
     'COMMENT_SINGLE',
     'COMMENT_MULTI',
     'EQUAL',
@@ -67,12 +64,14 @@ t_RBRACK = r'\]'
 t_LBRACE = r'\{'
 t_RBRACE = r'\}'
 t_HASH = r'\#'
+t_HASHSET=r'\#\{'
 t_EQUAL = r'='
 t_NOT_EQUAL = r'not='
 t_GREATER_THAN = r'>'
 t_LESS_THAN = r'<'
 t_GREATER_EQUAL = r'>='
 t_LESS_EQUAL = r'<='
+
 
 # Regla para identificadores y palabras reservadas
 def t_ID(t):
@@ -105,7 +104,7 @@ def t_COMMENT_SINGLE(t):
 
 # Regla para comentarios de múltiples líneas (simulación)
 def t_COMMENT_MULTI(t):
-    r'\#\{[^\}]*\}'
+    r'\#_\{[^\}]*\}'
     pass  # L
 
 
@@ -147,11 +146,9 @@ def test_lexer():
     #       "es impar")
     #     (str numero " no es un número entero")))
     #     '''
-    logger.warning("Algoritmo 1")
-    logger.warning(f"INPUT : {data}")
     lexer.input(data)
     while True:
         tok = lexer.token()
         if not tok:
             break  # No más entrada
-        logger.warning(tok)
+  

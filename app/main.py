@@ -1,19 +1,22 @@
 
-from logger_instance import get_group_logger
-from datetime import datetime
 from lexer import lexer
-from sintactico import parser
-from config import settings
+from sparser import parser
+from logger_instance import logger
 
-#No olvidar actualizar variables de entorno
-logger = get_group_logger(settings.NOMBRE_AVANCE, settings.NOMBRE_ESTUDIANTE, datetime.now())
-
+#No olvidar actualizar variables de entorno para el logger
 if __name__ == "__main__":
     while True:
         try:
             s = input('clojure > ')
+            
+            logger.warning(f"INPUT : {s}")
+        
         except EOFError:
+            
+            logger.warning(f"EOFError")
             break
         if not s: continue
         result = parser.parse(s)
-        print(result)
+        
+        logger.warning(f"{result}")
+
