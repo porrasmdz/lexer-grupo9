@@ -3,6 +3,7 @@ from lexer import tokens
 from logger_instance import logger
 
 #Main syntax rule
+variables ={}
 def p_codigo(p):
     '''codigo : expresionesAritmeticas
               | impresion
@@ -15,11 +16,16 @@ def p_codigo(p):
 #Expresiones
 def p_expresionesAritmeticas(p):
         '''expresionesAritmeticas : expresionAritmetica
-                | LPAREN operador expresionesAritmeticas expresionAritmetica RPAREN'''
+                | LPAREN operador expresionesAritmeticas expresionAritmetica RPAREN
+        '''
+        #print(type(p[3]))
+    
     
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operador valor valor RPAREN
-            | valor'''
+            | valor'''
+    print(p[1])
+            
     
 def p_operador(p):
     '''operador : TIMES
@@ -49,6 +55,11 @@ def p_asignacion(p):
                | LPAREN LET LPAREN asignaciones RPAREN RPAREN
                 
     '''
+    if len(p)==6:
+        variables [p[3]] = p[4]
+        print(type(p[4]))
+    print(variables)
+            
 def p_asignaciones(p):
     '''
     asignaciones : ID valor
