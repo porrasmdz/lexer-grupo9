@@ -1,0 +1,3 @@
+2024-07-07 10:28:39,086 | INPUT : (* 8 6)
+2024-07-07 10:28:39,087 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-07-07 10:28:39,087 | None

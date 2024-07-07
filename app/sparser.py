@@ -4,7 +4,7 @@ from logger_instance import logger
 
 #Main syntax rule
 def p_codigo(p):
-    '''codigo : expresionAritmetica
+    '''codigo : expresionesAritmeticas
               | impresion
               | condiciones
               | estructuraDatos
@@ -13,14 +13,19 @@ def p_codigo(p):
               | asignacion'''
 
 #Expresiones
+def p_expresionesAritmeticas(p):
+        '''expresionesAritmeticas : expresionAritmetica
+                | LPAREN operador expresionesAritmeticas expresionAritmetica RPAREN'''
+    
 def p_expresionAritmetica(p):
-    '''expresionAritmetica : LPAREN operador valor valor RPAREN'''
+    '''expresionAritmetica : LPAREN operador valor valor RPAREN
+            | valor'''
     
 def p_operador(p):
-    '''operador : PLUS
-                | MINUS
-                | TIMES
-                | DIVIDE'''
+    '''operador : TIMES
+                | PLUS
+                | DIVIDE
+                | MINUS'''
             
 def p_impresion(p):
     '''impresion : LPAREN PRINT valores RPAREN

@@ -1,0 +1,13 @@
+2024-07-07 10:44:44,968 | INPUT : ( / 8 8)
+2024-07-07 10:44:44,969 | Syntax error at line 1, position 2: Unexpected token '/'
+2024-07-07 10:44:44,970 | None
+2024-07-07 10:44:50,909 | INPUT : (/ 8 6)
+2024-07-07 10:44:50,910 | Syntax error at line 1, position 1: Unexpected token '/'
+2024-07-07 10:44:50,910 | None
+2024-07-07 10:44:54,643 | INPUT : (+ 5 6 )
+2024-07-07 10:44:54,644 | None
+2024-07-07 10:45:01,234 | INPUT : ( + 6 8 )
+2024-07-07 10:45:01,234 | None
+2024-07-07 10:45:22,706 | INPUT : ( * 8 6 )
+2024-07-07 10:45:22,707 | Syntax error at line 1, position 2: Unexpected token '*'
+2024-07-07 10:45:22,707 | None

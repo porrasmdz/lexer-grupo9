@@ -1,0 +1,11 @@
+2024-07-07 10:32:48,157 | INPUT : *
+2024-07-07 10:32:48,158 | None
+2024-07-07 10:32:53,617 | INPUT : (* 8 6)
+2024-07-07 10:32:53,617 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-07-07 10:32:53,618 | None
+2024-07-07 10:33:01,184 | INPUT : ( * 8 6 )
+2024-07-07 10:33:01,185 | Syntax error at line 1, position 2: Unexpected token '*'
+2024-07-07 10:33:01,186 | None
+2024-07-07 10:33:13,395 | INPUT : * 8 6
+2024-07-07 10:33:13,395 | Syntax error at line 1, position 2: Unexpected token '8'
+2024-07-07 10:33:13,396 | None
