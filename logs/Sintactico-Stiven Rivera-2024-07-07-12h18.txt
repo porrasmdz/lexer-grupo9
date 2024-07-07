@@ -1,0 +1,13 @@
+2024-07-07 12:18:56,232 | INPUT : (* 8 5)
+2024-07-07 12:18:56,233 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-07-07 12:18:56,234 | None
+2024-07-07 12:18:57,615 | INPUT : (- 8 5)
+2024-07-07 12:18:57,616 | Syntax error at line 1, position 1: Unexpected token '-'
+2024-07-07 12:18:57,616 | None
+2024-07-07 12:19:00,154 | INPUT : ( def x 75)
+2024-07-07 12:19:00,155 | None
+2024-07-07 12:19:01,641 | INPUT : (print)
+2024-07-07 12:19:01,642 | None
+2024-07-07 12:19:04,789 | INPUT : (println)
+2024-07-07 12:19:04,790 | None
+2024-07-07 12:19:07,928 | INPUT : ( println shds)

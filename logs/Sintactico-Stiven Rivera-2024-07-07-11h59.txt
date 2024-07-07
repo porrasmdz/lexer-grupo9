@@ -1,0 +1,10 @@
+2024-07-07 11:59:14,542 | INPUT : (println x)
+2024-07-07 11:59:14,543 | Syntax error at line 1, position 1: Unexpected token 'pr'
+2024-07-07 11:59:14,545 | None
+2024-07-07 11:59:35,932 | INPUT : (/ ( + ( * 8 6) (- 8 6)) 8 )
+2024-07-07 11:59:35,933 | Syntax error at line 1, position 9: Unexpected token '*'
+2024-07-07 11:59:35,933 | None
+2024-07-07 11:59:39,999 | INPUT : (/ ( + ( * 8 6) (- 8 6)) 8 )
+2024-07-07 11:59:40,000 | Syntax error at line 1, position 9: Unexpected token '*'
+2024-07-07 11:59:40,001 | None
+2024-07-07 11:59:49,054 | INPUT : (println 75)

@@ -1,0 +1,9 @@
+2024-07-07 11:57:38,471 | INPUT : (print 7)
+2024-07-07 11:57:38,472 | Syntax error at line 1, position 1: Unexpected token 'pr'
+2024-07-07 11:57:38,472 | None
+2024-07-07 11:57:49,847 | INPUT : (println 7)
+2024-07-07 11:57:49,848 | Syntax error at line 1, position 1: Unexpected token 'pr'
+2024-07-07 11:57:49,849 | None
+2024-07-07 11:57:58,759 | INPUT : (println fsghj)
+2024-07-07 11:57:58,759 | Syntax error at line 1, position 1: Unexpected token 'pr'
+2024-07-07 11:57:58,760 | None

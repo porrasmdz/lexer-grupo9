@@ -1,0 +1,4 @@
+2024-07-07 12:02:11,255 | INPUT : (println 75)
+2024-07-07 12:02:21,227 | INPUT : (* 8 5)
+2024-07-07 12:02:21,228 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-07-07 12:02:21,229 | None

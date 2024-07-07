@@ -1,0 +1,14 @@
+2024-07-07 11:44:23,863 | INPUT : (* 6 8
+2024-07-07 11:44:23,863 | Syntax error: unexpected end of input
+2024-07-07 11:44:23,865 | None
+2024-07-07 11:44:26,218 | INPUT : (* 6 8)
+2024-07-07 11:44:26,219 | None
+2024-07-07 11:44:30,218 | INPUT : (- 8 6 )
+2024-07-07 11:44:30,219 | Syntax error at line 1, position 1: Unexpected token '-'
+2024-07-07 11:44:30,219 | None
+2024-07-07 11:44:50,341 | INPUT : (* 8 6)
+2024-07-07 11:44:50,343 | Syntax error at line 1, position 1: Unexpected token '*'
+2024-07-07 11:44:50,344 | None
+2024-07-07 11:44:53,871 | INPUT : (- 8 6)
+2024-07-07 11:44:53,872 | Syntax error at line 1, position 1: Unexpected token '-'
+2024-07-07 11:44:53,873 | None

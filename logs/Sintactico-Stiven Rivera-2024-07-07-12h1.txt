@@ -1,0 +1,9 @@
+2024-07-07 12:01:45,548 | INPUT : (println x)
+2024-07-07 12:01:45,549 | Syntax error at line 1, position 1: Unexpected token 'println'
+2024-07-07 12:01:45,550 | None
+2024-07-07 12:01:50,064 | INPUT : (print)
+2024-07-07 12:01:50,065 | Syntax error at line 1, position 1: Unexpected token 'print'
+2024-07-07 12:01:50,066 | None
+2024-07-07 12:01:58,877 | INPUT : ( def x 75)
+2024-07-07 12:01:58,878 | Syntax error at line 1, position 2: Unexpected token 'def'
+2024-07-07 12:01:58,879 | None
