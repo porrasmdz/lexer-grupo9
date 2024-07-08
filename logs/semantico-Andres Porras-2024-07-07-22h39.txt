@@ -1,0 +1,15 @@
+2024-07-07 22:39:39,333 | INPUT : (def x 10) 
+2024-07-07 22:39:39,335 | None
+2024-07-07 22:39:51,313 | INPUT : (def y 3.14)
+2024-07-07 22:39:51,314 | Syntax error at line 1, position 9: Unexpected token '14'
+2024-07-07 22:39:51,314 | None
+2024-07-07 22:39:55,833 | INPUT : (def z true)
+2024-07-07 22:39:55,835 | None
+2024-07-07 22:40:00,947 | INPUT : (def es-mayor (if (> 15 10) true false))
+2024-07-07 22:40:00,948 | Syntax error at line 1, position 15: Unexpected token 'if'
+2024-07-07 22:40:00,949 | Syntax error at line 1, position 28: Unexpected token 'true'
+2024-07-07 22:40:00,956 | None
+2024-07-07 22:40:06,064 | INPUT : (def lista-de-nombres '("Juan" "María" "Pedro")) 
+2024-07-07 22:40:06,065 | Syntax error at line 1, position 22: Unexpected token ''('
+2024-07-07 22:40:06,067 | None
+2024-07-07 22:40:16,824 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5}) 

@@ -1,0 +1,9 @@
+2024-07-07 22:50:58,229 | INPUT : (def lista-de-nombres '("Juan" "María" "Pedro"))
+2024-07-07 22:50:58,230 | Syntax error at line 1, position 1: Unexpected token 'de'
+2024-07-07 22:50:58,233 | None
+2024-07-07 22:51:06,646 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5})
+2024-07-07 22:51:06,673 | Syntax error at line 1, position 1: Unexpected token 'de'
+2024-07-07 22:51:06,723 | None
+2024-07-07 22:51:20,955 | INPUT : (println)
+2024-07-07 22:51:20,955 | Syntax error at line 1, position 1: Unexpected token 'pr'
+2024-07-07 22:51:20,957 | None

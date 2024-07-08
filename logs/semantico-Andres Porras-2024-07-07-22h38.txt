@@ -1,0 +1,28 @@
+2024-07-07 22:38:17,078 | INPUT : (println)
+2024-07-07 22:38:17,078 | None
+2024-07-07 22:38:21,717 | INPUT : (println "Hola, mundo!")
+2024-07-07 22:38:37,842 | INPUT : (println "El resultado es" (+ 2 3)) 
+2024-07-07 22:38:44,594 | INPUT : 
+2024-07-07 22:38:44,595 | Syntax error: unexpected end of input
+2024-07-07 22:38:44,595 | None
+2024-07-07 22:38:46,141 | INPUT : (+ 2 3)
+2024-07-07 22:38:46,142 | None
+2024-07-07 22:38:49,537 | INPUT : (+ 2 3)
+2024-07-07 22:38:49,538 | None
+2024-07-07 22:38:56,274 | INPUT : (+ 2 3)
+2024-07-07 22:38:56,275 | None
+2024-07-07 22:39:02,205 | INPUT : (+ 2 3)
+2024-07-07 22:39:02,206 | None
+2024-07-07 22:39:04,817 | INPUT : (+ 2 3
+2024-07-07 22:39:04,817 | Syntax error: unexpected end of input
+2024-07-07 22:39:04,818 | None
+2024-07-07 22:39:08,066 | INPUT : + 2 3
+2024-07-07 22:39:08,066 | Syntax error at line 1, position 0: Unexpected token '+'
+2024-07-07 22:39:08,067 | None
+2024-07-07 22:39:18,713 | INPUT : (+ (* 2 3) (- 7 4))
+2024-07-07 22:39:18,714 | Syntax error at line 1, position 4: Unexpected token '*'
+2024-07-07 22:39:18,716 | None
+2024-07-07 22:39:20,819 | INPUT : (+ (* 2 3) (- 7 4))
+2024-07-07 22:39:20,819 | Syntax error at line 1, position 4: Unexpected token '*'
+2024-07-07 22:39:20,820 | None
+2024-07-07 22:39:28,393 | INPUT : (if (< 5 10)  (println "5 es menor que 10") (println "5 no es menor que 10")) 

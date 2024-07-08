@@ -1,0 +1,39 @@
+2024-07-07 22:35:19,900 | INPUT : (+ 2 3)
+2024-07-07 22:35:19,900 | None
+2024-07-07 22:35:27,374 | INPUT : (+ (* 2 3) (- 7 4))
+2024-07-07 22:35:27,376 | Syntax error at line 1, position 4: Unexpected token '*'
+2024-07-07 22:35:27,377 | None
+2024-07-07 22:35:36,972 | INPUT : (if (< 5 10)  (println "5 es menor que 10") (println "5 no es menor que 10")) 
+2024-07-07 22:35:36,973 | None
+2024-07-07 22:35:43,046 | INPUT : (if (< 5 10)  "5 es menor que 10" "5 no es menor que 10")
+2024-07-07 22:35:43,047 | Syntax error at line 1, position 14: Unexpected token '"5 es menor que 10"'
+2024-07-07 22:35:43,048 | None
+2024-07-07 22:36:04,000 | INPUT : (def x 10) 
+2024-07-07 22:36:04,001 | None
+2024-07-07 22:36:07,450 | INPUT : (def y 3.14)
+2024-07-07 22:36:07,453 | Syntax error at line 1, position 9: Unexpected token '14'
+2024-07-07 22:36:07,456 | None
+2024-07-07 22:36:15,299 | INPUT : (def z true)(def y 3.14)
+2024-07-07 22:36:15,300 | Syntax error at line 1, position 12: Unexpected token '('
+2024-07-07 22:36:15,301 | None
+2024-07-07 22:36:19,973 | INPUT : (def z true)
+2024-07-07 22:36:19,974 | None
+2024-07-07 22:36:27,820 | INPUT : (def suma (+ 5 7))
+2024-07-07 22:36:27,820 | None
+2024-07-07 22:36:41,298 | INPUT : (def es-mayor (if (> 15 10) true false))
+2024-07-07 22:36:41,299 | Syntax error at line 1, position 15: Unexpected token 'if'
+2024-07-07 22:36:41,299 | Syntax error at line 1, position 28: Unexpected token 'true'
+2024-07-07 22:36:41,299 | None
+2024-07-07 22:36:48,587 | INPUT : (def lista-de-nombres '("Juan" "María" "Pedro")) 
+2024-07-07 22:36:48,587 | None
+2024-07-07 22:36:53,509 | INPUT : (def conjunto-de-numeros #{1 2 3 4 5}) 
+2024-07-07 22:36:53,510 | None
+2024-07-07 22:36:58,368 | INPUT : ('("Juan" "María" "Pedro"))
+2024-07-07 22:36:58,371 | Syntax error at line 1, position 1: Unexpected token ''('
+2024-07-07 22:36:58,375 | None
+2024-07-07 22:37:10,797 | INPUT : ('("Juan" "María" "Pedro"))
+2024-07-07 22:37:10,797 | Syntax error at line 1, position 1: Unexpected token ''('
+2024-07-07 22:37:10,798 | None
+2024-07-07 22:37:20,801 | INPUT : (#{1 2 3 4 5})
+2024-07-07 22:37:20,802 | Syntax error at line 1, position 1: Unexpected token '#{'
+2024-07-07 22:37:20,803 | None
