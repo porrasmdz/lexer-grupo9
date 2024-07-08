@@ -1,0 +1,10 @@
+2024-07-07 22:51:38,540 | INPUT : (println)
+2024-07-07 22:51:38,543 | Syntax error at line 1, position 8: Unexpected token ')'
+2024-07-07 22:51:38,544 | None
+2024-07-07 22:51:43,548 | INPUT : (println "Hola, mundo!")
+2024-07-07 22:51:43,551 | Syntax error at line 1, position 9: Unexpected token '"Hola, mundo!"'
+2024-07-07 22:51:43,552 | None
+2024-07-07 22:51:47,264 | INPUT : (println "El resultado es" (+ 2 3)) 
+2024-07-07 22:51:47,267 | Syntax error at line 1, position 9: Unexpected token '"El resultado es"'
+2024-07-07 22:51:47,268 | Syntax error at line 1, position 34: Unexpected token ')'
+2024-07-07 22:51:47,268 | None

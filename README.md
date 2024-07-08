@@ -24,14 +24,14 @@ $python ./app/main.py
 
 ##Definición de variables, todos los tipos, almacena resultados de expresiones/condicionales
 (def x 10) 
-(def y 3.14)
+(def y 3.14) !TODO
 (def z true)
 (def suma (+ 5 7)) !!TODO
 (def es-mayor (if (> 15 10) true false)) !!TODO
-(def lista-de-nombres '("Juan" "María" "Pedro")) 
-(def conjunto-de-numeros #{1 2 3 4 5}) 
+(def lista-de-nombres '("Juan" "María" "Pedro")) !!TODO
+(def conjunto-de-numeros #{1 2 3 4 5})  !!TODO
 
 ##Declarar estructuras de datos
-('("Juan" "María" "Pedro"))
-(#{1 2 3 4 5})
+'("Juan" "María" "Pedro")  !!TODO
+#{1 2 3 4 5} 
 
