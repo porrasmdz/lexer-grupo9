@@ -18,14 +18,23 @@ def p_expresionesAritmeticas(p):
         '''expresionesAritmeticas : expresionAritmetica
                 | LPAREN operador expresionesAritmeticas expresionAritmetica RPAREN
         '''
-        #print(type(p[3]))
+
     
     
 def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operador valor valor RPAREN
             | valor'''
-    print(p[1])
-            
+    if len(p) == 2:  # valor
+        if isinstance(p[1], str) and p[1] not in variables:
+            print(f"Variable '{p[1]}' no definida")
+            return
+    else:  # expresión aritmética
+        if isinstance(p[3], str) and p[3] not in variables:
+            print(f"Variable '{p[3]}' no definida")
+            return
+        if isinstance(p[4], str) and p[4] not in variables:
+            print(f"Variable '{p[4]}' no definida")
+            return
     
 def p_operador(p):
     '''operador : TIMES
@@ -94,6 +103,12 @@ def p_condiciones(p):
                 
 def p_condicion(p):
     '''condicion : LPAREN operComp valor valor RPAREN'''
+    if isinstance(p[3], str) and p[3] not in variables:
+        print(f"Variable '{p[3]}' no definida")
+        return
+    if isinstance(p[4], str) and p[4] not in variables:
+        print(f"Variable '{p[4]}' no definida")
+        return
     
 def p_conector(p):
     '''conector : AND
@@ -132,6 +147,10 @@ def p_valor(p):
         | FLOAT
         | STRING
         | ID'''
+    if isinstance(p[1], str) and p[1] not in variables:
+        print(f"Variable '{p[1]}' no definida")
+        return
+    p[0] = p[1]
     
 def p_valores(p):
     '''valores : valor 
