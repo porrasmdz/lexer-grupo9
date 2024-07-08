@@ -1,0 +1,1 @@
+2024-07-07 23:10:21,125 | INPUT : (println "El resultado es" (+ 2 3))

@@ -32,6 +32,6 @@ $python ./app/main.py
 (def conjunto-de-numeros #{1 2 3 4 5})  !!TODO
 
 ##Declarar estructuras de datos
-('("Juan" "María" "Pedro")) !!TODO
-(#{1 2 3 4 5}) !!TODO
+'("Juan" "María" "Pedro")  !!TODO
+#{1 2 3 4 5} 
 

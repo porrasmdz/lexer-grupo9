@@ -27,6 +27,7 @@ reserved = {
     "range": "RANGE",
     "for": "FOR"
 }
+
 tokens = (
     'INT',
     'FLOAT',
@@ -55,7 +56,7 @@ tokens = (
     'GREATER_EQUAL',
     'LESS_EQUAL',
     'COMILLA',
-)  + tuple(reserved.values())
+) + tuple(reserved.values())
 
 # Regular expression rules for simple tokens
 t_PLUS = r'\+'
@@ -69,8 +70,8 @@ t_RBRACK = r'\]'
 t_LBRACE = r'\{'
 t_RBRACE = r'\}'
 t_HASH = r'\#'
-t_HASHSET=r'\#\{'
-t_LISTSTART=r'\'\('
+t_HASHSET = r'\#\{'
+t_LISTSTART = r'\'\('
 t_EQUAL = r'='
 t_NOT_EQUAL = r'not='
 t_GREATER_THAN = r'>'
@@ -81,26 +82,22 @@ t_COMILLA = r'\''
 
 # Regla para identificadores y palabras reservadas
 def t_ID(t):
-    # r'[\!\?\-_a-zA-Z][\!\?\-_a-zA-Z0-9]'
     r'[\*!\?\-_a-zA-Z][\*!\?\-_a-zA-Z0-9]*'
-    # r'[\*[^\s]!\?\-_a-zA-Z][\*[^\s]!\?\-_a-zA-Z0-9]*|\*[^\s]+[\*[^\s]!\?\-_a-zA-Z0-9]*'
-    #r'[a-zA-Z_][a-zA-Z_0-9]*'
     t.type = reserved.get(t.value, 'ID')
     return t
 
 def t_INT(t):
     r'\d+'
-    t.value = int(t.value)    
+    t.value = int(t.value)
     return t
 
-
-t_STRING = r'\"([^\\\n]|(\\.))*?\"'
+def t_STRING(t):
+    r'\"([^\\\n]|(\\.))*?\"'
 
 def t_FLOAT(t):
     r'\d+\.\d+([eE][-+]?\d+)?'
     t.value = float(t.value)
     return t
-
 
 def t_BOOLEAN(t):
     r'\b(true|false)\b'
@@ -111,11 +108,10 @@ def t_COMMENT_SINGLE(t):
     r';[^\n]*'
     pass  # Los comentarios de una sola línea se ignoran completamente
 
-# Regla para comentarios de múltiples líneas (simulación)
+# Regla para comentarios de múltiples líneas
 def t_COMMENT_MULTI(t):
-    r'\#_\{[^\}]*\}'
-    pass  # L
-
+    r'\#_\{[^}]*\}'
+    pass  # Los comentarios de múltiples líneas se ignoran completamente
 
 def t_newline(t):
     r'\n+'
@@ -124,14 +120,13 @@ def t_newline(t):
 t_ignore = ' \t'
 
 def t_error(t):
+    print("Error during analysis\n")
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
-
 
 lexer = lex()
 
 def test_lexer():
-    #Alg 1
     data = '''
     (defn longitud-cadena [s]
         ;; Verifica que el argumento sea una cadena
@@ -145,19 +140,12 @@ def test_lexer():
             ;; Genera una excepción si el argumento no es una cadena
         (throw (IllegalArgumentException. "El argumento debe ser una cadena"))))
     '''
-        #Alg 2
-    #data =  '''
-    #     ; Numero es par o impar
-    # (defn determinar-paridad [numero]
-    #   (if (integer? numero)
-    #     (if (zero? (mod numero 2))
-    #       "es par"
-    #       "es impar")
-    #     (str numero " no es un número entero")))
-    #     '''
     lexer.input(data)
     while True:
         tok = lexer.token()
         if not tok:
-            break  # No más entrada
-  
+            break
+        print(tok)
+
+if __name__ == "__main__":
+    test_lexer()
