@@ -131,8 +131,7 @@ def p_valor(p):
     '''valor : INT
         | FLOAT
         | STRING
-        | ID
-        | expresionAritmetica'''
+        | ID'''
     
 def p_valores(p):
     '''valores : valor 

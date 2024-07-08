@@ -1,0 +1,8 @@
+2024-07-07 23:28:32,217 | INPUT : print()
+2024-07-07 23:28:32,218 | Syntax error at line 1, position 0: Unexpected token 'print'
+2024-07-07 23:28:32,219 | None
+2024-07-07 23:28:37,554 | INPUT : (print)
+2024-07-07 23:28:37,556 | None
+2024-07-07 23:28:40,361 | INPUT : (println )
+2024-07-07 23:28:40,362 | None
+2024-07-07 23:28:43,489 | INPUT : (println 45)

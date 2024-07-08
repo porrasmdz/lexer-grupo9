@@ -1,0 +1,2 @@
+2024-07-07 23:02:26,335 | INPUT : (def conjunto-de-numeros #{1 2񂍾�5})
+2024-07-07 23:02:42,479 | INPUT : (def conjunto-de-numeros #{1 2񂍾�5})
