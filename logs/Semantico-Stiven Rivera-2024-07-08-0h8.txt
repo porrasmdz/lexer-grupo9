@@ -1,0 +1,2 @@
+2024-07-08 00:08:24,396 | INPUT : (- 6 6)
+2024-07-08 00:08:24,397 | Syntax error at line 1, position 1: Unexpected token '-'

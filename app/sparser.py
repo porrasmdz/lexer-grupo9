@@ -117,18 +117,19 @@ def p_condicion(p):
         return
     if isinstance(p[4], str) and p[4] not in variables:
         print(f"Variable '{p[4]}' no definida")
+        return        
+    if isinstance(p[4], str) and p[4] not in variables:
+        logger.warning(f"Variable '{p[4]}' no definida")
         return
+    #Validar que las variables hayan sido definidas - Andres Porras
+    
+    #Validar que las comparaciones solo se hagan entre numeros
     if not isinstance(p[3], int) and p[3] not in variables:
         print(f"Esta operacion solo puede realizarse entre numeros")
         return
     if not isinstance(p[4], int) and p[4] not in variables:
         print(f"Esta operacion solo puede realizarse entre numeros")
         return
-        
-    if isinstance(p[4], str) and p[4] not in variables:
-        logger.warning(f"Variable '{p[4]}' no definida")
-        return
-    #Validar que las variables hayan sido definidas - Andres Porras
     
 def p_conector(p):
     '''conector : AND
