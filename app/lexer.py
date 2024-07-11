@@ -25,7 +25,8 @@ reserved = {
     "set": "SET",
     "list": "LIST",
     "range": "RANGE",
-    "for": "FOR"
+    "for": "FOR",
+    "when":"WHEN"
 }
 
 tokens = (
@@ -135,7 +136,7 @@ lexer = lex()
 
 def test_lexer():
     data = '''
-    (defn longitud-cadena [s]
+    (defn longitudcadena [s]
         ;; Verifica que el argumento sea una cadena
         (if (string? s)
             ;; Calcula la longitud iterando sobre cada carácter
