@@ -1,2 +1,0 @@
-2024-07-11 02:03:36,571 | Syntax error at line 1, position 0: Unexpected token '1' of type 'INT'
-2024-07-11 02:03:40,822 | Syntax error at line 1, position 1: Unexpected token '1' of type 'INT'

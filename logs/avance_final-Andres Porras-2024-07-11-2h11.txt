@@ -1,2 +1,0 @@
-2024-07-11 02:12:15,431 | Syntax error at line 1, position 0: Unexpected token '+' of type 'PLUS'
-2024-07-11 02:12:20,362 | Syntax error at line 1, position 1: Unexpected token ')' of type 'RPAREN'

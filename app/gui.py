@@ -17,7 +17,7 @@ class ClojureApp(tk.Tk):
         
         logger.info("App Initialized")
         #UI
-        self.append_menu_component()
+        # self.append_menu_component()
         self.append_code_evaluation_column()
         self.append_ply_analyzers_column()
         logger.info("App Rendered Components correctly")

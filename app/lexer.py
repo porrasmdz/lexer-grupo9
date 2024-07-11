@@ -3,18 +3,18 @@ from ply.lex import lex
 reserved = {
     "def": "DEF",
     "if": "IF",
-    "fn": "FN",
-    "quote": "QUOTE",
-    "try": "TRY",
+    # "fn": "FN",
+    # "quote": "QUOTE",
+    # "try": "TRY",
     "defn": "DEFN",
     "loop": "LOOP",
-    "var": "VAR",
-    "catch": "CATCH",
+    # "var": "VAR",
+    # "catch": "CATCH",
     "let": "LET",
-    "do": "DO",
-    "recur": "RECUR",
-    "throw": "THROW",
-    "finally": "FINALLY",
+    # "do": "DO",
+    # "recur": "RECUR",
+    # "throw": "THROW",
+    # "finally": "FINALLY",
     "and": "AND",
     "or": "OR",
     "not": "NOT",
@@ -44,7 +44,7 @@ tokens = (
     'RBRACK',
     'LBRACE',
     'RBRACE',
-    'HASH',
+    # 'HASH',
     'HASHSET',
     'LISTSTART',
     'COMMENT_SINGLE',
@@ -69,7 +69,7 @@ t_LBRACK = r'\['
 t_RBRACK = r'\]'
 t_LBRACE = r'\{'
 t_RBRACE = r'\}'
-t_HASH = r'\#'
+# t_HASH = r'\#'
 t_HASHSET = r'\#\{'
 t_LISTSTART = r'\'\('
 t_EQUAL = r'='

@@ -158,7 +158,6 @@ def p_valor(p):
         | ID'''
 
     if not isinstance(p[1], str) and not isinstance(p[1], int) and not isinstance(p[1], float) and p[1] not in variables:
-        # logger.warning()
         raise SemanticError(f"Variable '{p[1]}' no definida")
         # return
     p[0] = p[1]
