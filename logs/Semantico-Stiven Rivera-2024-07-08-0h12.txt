@@ -1,0 +1,4 @@
+2024-07-08 00:12:12,562 | INPUT : print pu)
+2024-07-08 00:12:12,563 | Syntax error at line 1, position 0: Unexpected token 'print'
+2024-07-08 00:12:19,594 | INPUT : (print dfgf)
+2024-07-08 00:12:19,596 | None
