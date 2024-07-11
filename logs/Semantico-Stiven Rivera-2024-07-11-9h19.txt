@@ -1,0 +1,10 @@
+2024-07-11 09:19:37,799 | Syntax error at line 1, position 7: Unexpected token 'Ingrese' of type 'ID'
+2024-07-11 09:19:49,523 | Variable 'a' no definida
+2024-07-11 09:19:50,940 | Variable 'a' no definida
+2024-07-11 09:19:52,075 | Variable 'a' no definida
+2024-07-11 09:19:53,485 | Variable 'a' no definida
+2024-07-11 09:20:22,285 | Syntax error at line 1, position 2: Unexpected token '5' of type 'INT'
+2024-07-11 09:20:23,281 | Syntax error at line 1, position 2: Unexpected token '5' of type 'INT'
+2024-07-11 09:20:24,199 | Syntax error at line 1, position 2: Unexpected token '5' of type 'INT'
+2024-07-11 09:20:35,376 | Syntax error at line 1, position 2: Unexpected token '5' of type 'INT'
+2024-07-11 09:20:35,950 | Syntax error at line 1, position 2: Unexpected token '5' of type 'INT'

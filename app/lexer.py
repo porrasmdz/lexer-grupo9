@@ -7,7 +7,7 @@ reserved = {
     # "quote": "QUOTE",
     # "try": "TRY",
     "defn": "DEFN",
-    "loop": "LOOP",
+ #   "loop": "LOOP",
     # "var": "VAR",
     # "catch": "CATCH",
     "let": "LET",
@@ -17,8 +17,8 @@ reserved = {
     # "finally": "FINALLY",
     "and": "AND",
     "or": "OR",
-    "not": "NOT",
-    "mod": "MOD",
+#    "not": "NOT",
+#    "mod": "MOD",
     "print":"PRINT",
     "println":"PRINTLN",
     "while" : "WHILE",
@@ -33,7 +33,7 @@ tokens = (
     'INT',
     'FLOAT',
     'STRING',
-    'BOOLEAN',
+    #'BOOLEAN',
     'ID',
     'PLUS',
     'MINUS',
@@ -47,9 +47,9 @@ tokens = (
     'RBRACE',
     # 'HASH',
     'HASHSET',
-    'LISTSTART',
-    'COMMENT_SINGLE',
-    'COMMENT_MULTI',
+ #   'LISTSTART',
+ #   'COMMENT_SINGLE',
+ #   'COMMENT_MULTI',
     'EQUAL',
     'NOT_EQUAL',
     'GREATER_THAN',
@@ -72,7 +72,7 @@ t_LBRACE = r'\{'
 t_RBRACE = r'\}'
 # t_HASH = r'\#'
 t_HASHSET = r'\#\{'
-t_LISTSTART = r'\'\('
+#t_LISTSTART = r'\'\('
 t_EQUAL = r'='
 t_NOT_EQUAL = r'not='
 t_GREATER_THAN = r'>'
@@ -106,19 +106,19 @@ def t_FLOAT(t):
     t.value = float(t.value)
     return t
 
-def t_BOOLEAN(t):
-    r'\b(true|false)\b'
-    t.value = True if t.value == "true" else False
-    return t
+#def t_BOOLEAN(t):
+#    r'\b(true|false)\b'
+#    t.value = True if t.value == "true" else False
+#    return t
 
-def t_COMMENT_SINGLE(t):
-    r';[^\n]*'
-    pass  # Los comentarios de una sola línea se ignoran completamente
+#def t_COMMENT_SINGLE(t):
+ #   r';[^\n]*'
+  #  pass  # Los comentarios de una sola línea se ignoran completamente
 
 # Regla para comentarios de múltiples líneas
-def t_COMMENT_MULTI(t):
-    r'\#_\{[^}]*\}'
-    pass  # Los comentarios de múltiples líneas se ignoran completamente
+#def t_COMMENT_MULTI(t):
+#    r'\#_\{[^}]*\}'
+#    pass  # Los comentarios de múltiples líneas se ignoran completamente
 
 def t_newline(t):
     r'\n+'

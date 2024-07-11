@@ -1,0 +1,6 @@
+2024-07-11 09:21:03,123 | Variable 'a' no definida
+2024-07-11 09:21:03,537 | Variable 'a' no definida
+2024-07-11 09:21:03,705 | Variable 'a' no definida
+2024-07-11 09:21:06,396 | Variable 'a' no definida
+2024-07-11 09:21:06,852 | Variable 'a' no definida
+2024-07-11 09:21:08,078 | Variable 'a' no definida

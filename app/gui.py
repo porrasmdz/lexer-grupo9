@@ -6,7 +6,6 @@ from logger_instance import logger
 from sparser import parser
 from lexer import lexer
 from custom_errors import SemanticError
-
 class ClojureApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -14,9 +13,10 @@ class ClojureApp(tk.Tk):
         #Config
         logger.info("Initializing App")
         self.apply_settings()
-        
+
         logger.info("App Initialized")
         #UI
+        self.append_menu_component()
         # self.append_menu_component()
         self.append_code_evaluation_column()
         self.append_ply_analyzers_column()
@@ -35,7 +35,6 @@ class ClojureApp(tk.Tk):
         sv_ttk.set_theme("dark")
         #Title icon
         self.iconbitmap("app/assets/favicon.ico")  
-
     def append_menu_component(self):
         menu_bar = tk.Menu(self)
         
@@ -53,7 +52,6 @@ class ClojureApp(tk.Tk):
         menu_bar.add_cascade(label="Ayuda", menu=help_menu)
         
         self.config(menu=menu_bar)
-
     def append_code_evaluation_column(self):
         #Component State
         self.code_string= tk.StringVar(value="Ingrese su código aquí y pulse CTRL + ENTER para compilar...")
@@ -63,7 +61,6 @@ class ClojureApp(tk.Tk):
         frame_code = ttk.Frame(self, width=500)
         frame_code.pack(side="left", fill="both", padx=10, pady=10)
         frame_code.pack_propagate(False)
-
         self.label_code = ttk.Label(frame_code, text="Código")
         self.label_code.pack(anchor="w")
         
@@ -73,7 +70,6 @@ class ClojureApp(tk.Tk):
         
         self.button = ttk.Button(frame_code, text="Compilar Código", style="Accent.TButton", command=self.compile_code)
         self.button.pack(pady=10, anchor="w")
-
         self.label_result = ttk.Label(frame_code, text="Resultado")
         self.label_result.pack(anchor="w", pady=(10,0))
         self.text_result = ScrolledText(frame_code, width=40, state='disabled', #textvariable=self.result_string,
@@ -82,18 +78,15 @@ class ClojureApp(tk.Tk):
         
         self.text_result.pack(anchor="w",pady=5,  fill="x")
         self.entry_code.bind("<Control-Return>", self.compile_code)
-
     def append_ply_analyzers_column(self):
         #Component State
         self.lexical_analysis_state= tk.StringVar(value="Sin Iniciar")
         self.syntactic_analysis_state= tk.StringVar(value="Sin Iniciar")
         self.semantic_analysis_state= tk.StringVar(value="Sin Iniciar")
         
-
         #Component UI
         frame_analyzers = ttk.Frame(self)
         frame_analyzers.pack(side="right", fill="y", padx=10, pady=10)
-
         self.label1 = ttk.Label(frame_analyzers, text="Análisis Léxico")
         self.label1.pack(anchor="w")
         
@@ -111,7 +104,6 @@ class ClojureApp(tk.Tk):
         
         self.text3 = ttk.Entry(frame_analyzers, width=80, state='disabled', textvariable=self.semantic_analysis_state)
         self.text3.pack(pady=5)
-
     #====================================================
     #========Business Logic functions====================
     #====================================================    
@@ -145,13 +137,11 @@ class ClojureApp(tk.Tk):
             self.syntactic_analysis_state.set("ERROR LÉXICO")
             self.semantic_analysis_state.set("ERROR LÉXICO")
             self.result_string.set(str(ve))
-
         except SyntaxError as se:
             self.lexical_analysis_state.set("ERROR SINTÁCTICO")
             self.syntactic_analysis_state.set(str(se))
             self.semantic_analysis_state.set("ERROR SINTÁCTICO")
             self.result_string.set(str(se))
-
         except SemanticError as semtcerr:
             self.lexical_analysis_state.set("ERROR SEMÁNTICO")
             self.syntactic_analysis_state.set("ERROR SEMÁNTICO")
@@ -166,4 +156,4 @@ class ClojureApp(tk.Tk):
         self.text_result.delete('1.0', tk.END)
         self.text_result.insert(tk.END, text)
         self.text_result.config(state=tk.DISABLED)
-            
+     
