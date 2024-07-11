@@ -12,7 +12,14 @@ def p_codigo(p):
               | estructuraDatos
               | funcion
               | estructuraControl
-              | asignacion'''
+              | asignacion
+              | expresionesAritmeticas codigo
+              | impresion codigo
+              | condiciones codigo
+              | estructuraDatos codigo
+              | funcion codigo
+              | estructuraControl codigo
+              | asignacion codigo'''
 
 #Expresiones
 def p_expresionesAritmeticas(p):
