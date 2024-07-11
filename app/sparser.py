@@ -49,6 +49,10 @@ def p_impresion(p):
         | LPAREN PRINTLN valores RPAREN
         | LPAREN PRINT RPAREN
         | LPAREN PRINTLN RPAREN'''
+    if isinstance(p[3], str) and p[3] not in variables:
+        logger.warning(f"Variable '{p[3]}' no definida")
+        return    
+        
 
 #Funciones
 def p_funcion(p):
