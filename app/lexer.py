@@ -82,7 +82,8 @@ t_COMILLA = r'\''
 
 # Regla para identificadores y palabras reservadas
 def t_ID(t):
-    r'[\*!\?\-_a-zA-Z][\*!\?\-_a-zA-Z0-9]*'
+    #r'[\*!\?\-_a-zA-Z][\*!\?\-_a-zA-Z0-9]*'
+    r'[a-zA-Z_][a-zA-Z_0-9]*'
     t.type = reserved.get(t.value, 'ID')
     return t
 
