@@ -1,0 +1,7 @@
+2024-07-11 01:58:32,011 | Syntax error at line 1, position 0: Unexpected token 'Ingrese' of type 'ID'
+2024-07-11 01:58:47,290 | Variable '2' no definida
+2024-07-11 01:58:47,291 | Variable '3' no definida
+2024-07-11 01:58:47,291 | Esta operacion solo puede realizarse entre numeros
+2024-07-11 01:59:09,100 | Variable '2' no definida
+2024-07-11 01:59:09,101 | Variable '3' no definida
+2024-07-11 01:59:09,101 | Esta operacion solo puede realizarse entre numeros

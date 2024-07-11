@@ -1,7 +1,3 @@
-
-from lexer import lexer
-from sparser import parser
-from logger_instance import logger
 from gui import ClojureApp
 
 #No olvidar actualizar variables de entorno para el logger
