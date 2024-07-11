@@ -1,0 +1,12 @@
+2024-07-08 00:14:31,538 | INPUT : (def x "asda)
+2024-07-08 00:14:31,540 | Variable 'asda' no definida
+2024-07-08 00:14:31,541 | None
+2024-07-08 00:14:46,883 | INPUT : (def x "asda)
+2024-07-08 00:14:46,884 | Variable 'asda' no definida
+2024-07-08 00:14:46,885 | None
+2024-07-08 00:14:59,311 | INPUT : (def x "asda")
+2024-07-08 00:14:59,312 | Syntax error at line 1, position 13: Unexpected token ')' of type 'RPAREN'
+2024-07-08 00:14:59,313 | None
+2024-07-08 00:15:30,973 | INPUT : (def x "asda")
+2024-07-08 00:15:30,973 | Syntax error at line 1, position 13: Unexpected token ')' of type 'RPAREN'
+2024-07-08 00:15:31,012 | None

@@ -1,0 +1,19 @@
+2024-07-08 00:20:20,666 | INPUT : (def x "asda")
+2024-07-08 00:20:20,667 | None
+2024-07-08 00:20:32,315 | INPUT : (+ a "s" )
+2024-07-08 00:20:32,316 | Variable 'a' no definida
+2024-07-08 00:20:32,316 | Variable 's' no definida
+2024-07-08 00:20:32,317 | Esta operacion solo puede realizarse entre numeros
+2024-07-08 00:20:32,318 | None
+2024-07-08 00:20:39,248 | INPUT : (+ a "s")
+2024-07-08 00:20:39,249 | Variable 'a' no definida
+2024-07-08 00:20:39,250 | Variable 's' no definida
+2024-07-08 00:20:39,250 | Esta operacion solo puede realizarse entre numeros
+2024-07-08 00:20:39,251 | None
+2024-07-08 00:20:58,674 | INPUT : (println)
+2024-07-08 00:20:58,675 | None
+2024-07-08 00:21:04,176 | INPUT : (println "Hola, mundo!")
+2024-07-08 00:21:04,176 | Variable 'Hola, mundo!' no definida
+2024-07-08 00:21:04,177 | None
+2024-07-08 00:24:18,174 | INPUT : (println 3)
+2024-07-08 00:24:18,175 | None

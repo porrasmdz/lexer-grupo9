@@ -93,6 +93,11 @@ def t_INT(t):
 
 def t_STRING(t):
     r'\"([^\\\n]|(\\.))*?\"'
+    t.value = t.value[1:-1]  # Elimina las comillas del inicio y final
+    return t
+# def t_STRING(t):
+#     r'\"([^\\\n]|(\\.))*?\"'
+#     t.value = str(t.value)
 
 def t_FLOAT(t):
     r'\d+\.\d+([eE][-+]?\d+)?'

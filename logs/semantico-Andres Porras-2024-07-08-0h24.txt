@@ -1,0 +1,12 @@
+2024-07-08 00:24:24,519 | INPUT : (println "Hola, mundo!")
+2024-07-08 00:24:24,520 | None
+2024-07-08 00:24:34,806 | INPUT : (println a)
+2024-07-08 00:24:34,806 | None
+2024-07-08 00:24:40,788 | INPUT : (println c)
+2024-07-08 00:24:40,789 | None
+2024-07-08 00:24:48,909 | INPUT : (+ab)
+2024-07-08 00:24:48,910 | Syntax error at line 1, position 4: Unexpected token ')' of type 'RPAREN'
+2024-07-08 00:24:48,910 | None
+2024-07-08 00:24:51,202 | INPUT : (+a b)
+2024-07-08 00:24:51,204 | Variable 'a' no definida
+2024-07-08 00:24:51,204 | None

@@ -1,0 +1,6 @@
+2024-07-08 00:10:39,758 | INPUT : (def x "asda)
+2024-07-08 00:10:39,760 | Variable 'asda' no definida
+2024-07-08 00:10:39,763 | None
+2024-07-08 00:10:43,853 | INPUT : (def x "asda")
+2024-07-08 00:10:43,854 | Syntax error at line 1, position 13: Unexpected token ')'
+2024-07-08 00:10:43,854 | None

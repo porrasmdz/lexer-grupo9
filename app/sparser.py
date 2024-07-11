@@ -22,40 +22,22 @@ def p_expresionesAritmeticas(p):
     
     
 def p_expresionAritmetica(p):
-    '''expresionAritmetica : LPAREN operador valor valor RPAREN
-            | valor'''
-    if len(p) == 2:  # valor
-        if isinstance(p[1], str) and p[1] not in variables:
-<<<<<<< HEAD
-            print(f"Variable '{p[1]}' no definida")
-            return
-    else:  # expresión aritmética
-        if isinstance(p[3], str) and p[3] not in variables:
-            print(f"Variable '{p[3]}' no definida")
-            return
-        if isinstance(p[4], str) and p[4] not in variables:
-            print(f"Variable '{p[4]}' no definida")
-            return
+    '''expresionAritmetica : LPAREN operador valor valor RPAREN'''
+      # expresión aritmética
+    if isinstance(p[3], str) and p[3] not in variables:
+        logger.warning(f"Variable '{p[3]}' no definida")
+        return
+    if isinstance(p[4], str) and p[4] not in variables:
+        logger.warning(f"Variable '{p[4]}' no definida")
+        return
     if not isinstance(p[3], int) and p[4] not in variables:
-        print(f"Esta operacion solo puede realizarse entre numeros")
+        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
         return
     if not isinstance(p[4], int) and p[4] not in variables:
-        print(f"Esta operacion solo puede realizarse entre numeros")
+        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
         return
     
     
-=======
-            logger.warning(f"Variable '{p[1]}' no definida")
-            return
-    else:  # expresión aritmética
-        if isinstance(p[3], str) and p[3] not in variables:
-            logger.warning(f"Variable '{p[3]}' no definida")
-            return
-        if isinstance(p[4], str) and p[4] not in variables:
-            logger.warning(f"Variable '{p[4]}' no definida")
-            return
-    #Validar que las variables hayan sido definidas - Andres Porras
->>>>>>> a0dcd3c33f980b98e2ab7722167b783e66863e75
 def p_operador(p):
     '''operador : TIMES
                 | PLUS
@@ -80,6 +62,7 @@ def p_argumentos(p):
 def p_asignacion(p):
     '''
     asignacion : LPAREN DEF ID valor RPAREN
+                | LPAREN DEF ID STRING RPAREN
                | LPAREN DEF ID estructuraDatos RPAREN
                | LPAREN LET LPAREN asignaciones RPAREN RPAREN
                 
@@ -123,27 +106,18 @@ def p_condiciones(p):
                 
 def p_condicion(p):
     '''condicion : LPAREN operComp valor valor RPAREN'''
-    if isinstance(p[3], str) and p[3] not in variables:
-<<<<<<< HEAD
-        print(f"Variable '{p[3]}' no definida")
-        return
-    if isinstance(p[4], str) and p[4] not in variables:
-        print(f"Variable '{p[4]}' no definida")
-        return
-    if not isinstance(p[3], int) and p[3] not in variables:
-        print(f"Esta operacion solo puede realizarse entre numeros")
-        return
-    if not isinstance(p[4], int) and p[4] not in variables:
-        print(f"Esta operacion solo puede realizarse entre numeros")
-        return
-=======
+    if not isinstance(p[3], str) and p[3] not in variables:
         logger.warning(f"Variable '{p[3]}' no definida")
         return
-    if isinstance(p[4], str) and p[4] not in variables:
+    if not isinstance(p[4], str) and p[4] not in variables:
         logger.warning(f"Variable '{p[4]}' no definida")
         return
-    #Validar que las variables hayan sido definidas - Andres Porras
->>>>>>> a0dcd3c33f980b98e2ab7722167b783e66863e75
+    if not isinstance(p[3], int) and p[3] not in variables:
+        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
+        return
+    if not isinstance(p[4], int) and p[4] not in variables:
+        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
+        return
     
 def p_conector(p):
     '''conector : AND
@@ -182,15 +156,10 @@ def p_valor(p):
         | FLOAT
         | STRING
         | ID'''
-    if isinstance(p[1], str) and p[1] not in variables:
-<<<<<<< HEAD
-        print(f"Variable '{p[1]}' no definida")
-        return
-=======
+
+    if not isinstance(p[1], str) and p[1] not in variables:
         logger.warning(f"Variable '{p[1]}' no definida")
         return
-    #Verificar que cada variable haya sido incializada - Andres Porras
->>>>>>> a0dcd3c33f980b98e2ab7722167b783e66863e75
     p[0] = p[1]
     
 def p_valores(p):
@@ -201,7 +170,7 @@ def p_valores(p):
 # Error rule for syntax errors
 def p_error(p):
     if p:
-        logger.warning(f"Syntax error at line {p.lineno}, position {p.lexpos}: Unexpected token '{p.value}'")
+        logger.warning(f"Syntax error at line {p.lineno}, position {p.lexpos}: Unexpected token '{p.value}' of type '{p.type}'")
     else:
         logger.warning("Syntax error: unexpected end of input")
     # print("Syntax error in input!")

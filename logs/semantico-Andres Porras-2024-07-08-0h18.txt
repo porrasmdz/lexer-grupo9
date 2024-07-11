@@ -1,0 +1,6 @@
+2024-07-08 00:18:08,545 | INPUT : (def x "asda)
+2024-07-08 00:18:08,547 | Variable 'asda' no definida
+2024-07-08 00:18:08,548 | None
+2024-07-08 00:18:12,795 | INPUT : (def x "asda")
+2024-07-08 00:18:12,796 | Syntax error at line 1, position 13: Unexpected token ')' of type 'RPAREN'
+2024-07-08 00:18:12,796 | None
