@@ -126,8 +126,9 @@ def t_newline(t):
 t_ignore = ' \t'
 
 def t_error(t):
-    print("Error during analysis\n")
-    print("Illegal character '%s'" % t.value[0])
+    # print("Error during lexical analysis\n")
+    # print("Illegal character '%s'" % t.value[0])
+    raise ValueError(f"Error léxico: Carácter '{t.value[0]}' no válido en la línea {t.lineno}, posición {t.lexpos}")
     t.lexer.skip(1)
 
 lexer = lex()

@@ -1,0 +1,2 @@
+2024-07-11 02:04:09,386 | Syntax error at line 1, position 3: Unexpected token ')' of type 'RPAREN'
+2024-07-11 02:04:14,456 | Syntax error at line 1, position 0: Unexpected token '1' of type 'INT'

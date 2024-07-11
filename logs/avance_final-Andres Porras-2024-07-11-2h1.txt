@@ -1,0 +1,11 @@
+2024-07-11 02:01:20,467 | Syntax error at line 1, position 0: Unexpected token '+' of type 'PLUS'
+2024-07-11 02:01:27,121 | Variable '2' no definida
+2024-07-11 02:01:27,121 | Variable '3' no definida
+2024-07-11 02:01:27,122 | Esta operacion solo puede realizarse entre numeros
+2024-07-11 02:01:38,802 | Variable '2' no definida
+2024-07-11 02:01:38,803 | Variable '3' no definida
+2024-07-11 02:01:38,803 | Esta operacion solo puede realizarse entre numeros
+2024-07-11 02:01:47,814 | Variable 'a' no definida
+2024-07-11 02:01:55,206 | Variable '2' no definida
+2024-07-11 02:01:55,206 | Variable '3' no definida
+2024-07-11 02:01:55,208 | Esta operacion solo puede realizarse entre numeros

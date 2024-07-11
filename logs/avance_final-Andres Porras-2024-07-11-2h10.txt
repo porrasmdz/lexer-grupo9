@@ -1,0 +1,1 @@
+2024-07-11 02:11:01,103 | Syntax error at line 1, position 0: Unexpected token '1' of type 'INT'

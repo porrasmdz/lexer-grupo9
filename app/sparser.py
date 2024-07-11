@@ -1,7 +1,7 @@
 from ply import yacc as yacc
 from lexer import tokens
 from logger_instance import logger
-
+from custom_errors import SemanticError
 #Main syntax rule
 variables ={}
 def p_codigo(p):
@@ -25,17 +25,18 @@ def p_expresionAritmetica(p):
     '''expresionAritmetica : LPAREN operador valor valor RPAREN'''
       # expresión aritmética
     if isinstance(p[3], str) and p[3] not in variables:
-        logger.warning(f"Variable '{p[3]}' no definida")
-        return
+        raise SemanticError(f"Variable '{p[3]}' no definida")
+        
     if isinstance(p[4], str) and p[4] not in variables:
-        logger.warning(f"Variable '{p[4]}' no definida")
-        return
-    if not isinstance(p[3], int) and p[4] not in variables:
-        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
-        return
+        raise SemanticError(f"Variable '{p[4]}' no definida")
+        
+    if not isinstance(p[3], int) and p[3] not in variables:
+        
+        raise SemanticError(f"Esta operacion solo puede realizarse entre numeros")
+        
     if not isinstance(p[4], int) and p[4] not in variables:
-        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
-        return
+        raise SemanticError(f"Esta operacion solo puede realizarse entre numeros")
+        
     
     
 def p_operador(p):
@@ -69,8 +70,7 @@ def p_asignacion(p):
     '''
     if len(p)==6:
         variables [p[3]] = p[4]
-        print(type(p[4]))
-    print(variables)
+      
             
 def p_asignaciones(p):
     '''
@@ -107,17 +107,17 @@ def p_condiciones(p):
 def p_condicion(p):
     '''condicion : LPAREN operComp valor valor RPAREN'''
     if not isinstance(p[3], str) and p[3] not in variables:
-        logger.warning(f"Variable '{p[3]}' no definida")
-        return
+        raise SemanticError(f"Variable '{p[3]}' no definida")
+        
     if not isinstance(p[4], str) and p[4] not in variables:
-        logger.warning(f"Variable '{p[4]}' no definida")
-        return
+        raise SemanticError(f"Variable '{p[4]}' no definida")
+        
     if not isinstance(p[3], int) and p[3] not in variables:
-        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
-        return
+        raise SemanticError(f"Esta operacion solo puede realizarse entre numeros")
+        
     if not isinstance(p[4], int) and p[4] not in variables:
-        logger.warning(f"Esta operacion solo puede realizarse entre numeros")
-        return
+        raise SemanticError(f"Esta operacion solo puede realizarse entre numeros")
+        
     
 def p_conector(p):
     '''conector : AND
@@ -157,9 +157,10 @@ def p_valor(p):
         | STRING
         | ID'''
 
-    if not isinstance(p[1], str) and p[1] not in variables:
-        logger.warning(f"Variable '{p[1]}' no definida")
-        return
+    if not isinstance(p[1], str) and not isinstance(p[1], int) and not isinstance(p[1], float) and p[1] not in variables:
+        # logger.warning()
+        raise SemanticError(f"Variable '{p[1]}' no definida")
+        # return
     p[0] = p[1]
     
 def p_valores(p):
@@ -170,9 +171,10 @@ def p_valores(p):
 # Error rule for syntax errors
 def p_error(p):
     if p:
-        logger.warning(f"Syntax error at line {p.lineno}, position {p.lexpos}: Unexpected token '{p.value}' of type '{p.type}'")
+        raise SyntaxError(f"Syntax error at line {p.lineno}, position {p.lexpos}: Unexpected token '{p.value}' of type '{p.type}'")
     else:
-        logger.warning("Syntax error: unexpected end of input")
+        raise SyntaxError("Syntax error: unexpected end of input")
+    
     # print("Syntax error in input!")
 
 # Build the parser
