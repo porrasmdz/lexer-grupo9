@@ -57,9 +57,9 @@ def p_impresion(p):
         | LPAREN PRINTLN valores RPAREN
         | LPAREN PRINT RPAREN
         | LPAREN PRINTLN RPAREN'''
-    if not isinstance(p[3], int) and p[3] not in variables and not isinstance(p[3], float):
+    if isinstance(p[3], str) and p[3] not in variables:
         raise SemanticError(f"Variable '{p[3]}' no definida")
-          
+
         
 
 #Funciones
@@ -120,9 +120,9 @@ def p_condiciones(p):
                 
 def p_condicion(p):
     '''condicion : LPAREN operComp valor valor RPAREN'''
-    if not isinstance(p[3], str) and p[3] not in variables:
+    if isinstance(p[3], str) and p[3] not in variables:
         raise SemanticError(f"Variable '{p[3]}' no definida")
-    if not isinstance(p[4], str) and p[4] not in variables:
+    if isinstance(p[4], str) and p[4] not in variables:
         raise SemanticError(f"Variable '{p[4]}' no definida")
     if not isinstance(p[3], int) and p[3] not in variables:
         raise SemanticError(f"Esta operacion solo puede realizarse entre numeros")
@@ -154,12 +154,13 @@ def p_conjunto(p):
 
 ##PENDING lista
 def p_listas(p):
-    '''listas : LPAREN LIST contenidolistas RPAREN'''
+    '''listas : LPAREN LIST valores RPAREN
+            | COMILLA LPAREN valores RPAREN'''
 
-def p_contenidolistas(p):
-    '''contenidolistas : COMILLA valor
-            | COMILLA valor contenidolistas
-            | valores'''
+#def p_contenidolistas(p):
+#    '''contenidolistas : COMILLA valor
+#            | COMILLA valor contenidolistas
+#            | valores'''
 #Valores
 def p_valor(p):
     '''valor : INT
@@ -172,6 +173,8 @@ def p_valor(p):
         raise SemanticError(f"Variable '{p[1]}' no definida")
         # return
     p[0] = p[1]  
+    
+    
 def p_valores(p):
     '''valores : valor 
             | valor valores'''
